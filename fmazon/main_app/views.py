@@ -1,6 +1,4 @@
-from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render
 from .models import Item, Review
 from rest_framework import generics
 from .serializers import ItemSerializer, ReviewSerializer
@@ -17,6 +15,7 @@ class ItemList(generics.ListCreateAPIView):
 
 class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Item.objects.all()
+    serializer_class = ItemSerializer
 
 class ReviewList(generics.ListCreateAPIView):
     queryset = Review.objects.all()
@@ -24,3 +23,4 @@ class ReviewList(generics.ListCreateAPIView):
 
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
+    serializer_class = ReviewSerializer

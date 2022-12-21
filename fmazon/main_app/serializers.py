@@ -14,7 +14,8 @@ class ItemSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Item
-        fields= ('name', 'quantity', 'price', 'description', 'item_url', 'review')
+        # fields = '__all__'
+        fields= ('id', 'name', 'quantity', 'price', 'description', 'item_url', 'review')
 
 class ReviewSerializer(serializers.HyperlinkedModelSerializer):
     item = serializers.HyperlinkedRelatedField(
@@ -29,4 +30,5 @@ class ReviewSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Review
-        fields= ('title', 'comment', 'item_id', 'item')
+        # fields = '__all__'
+        fields= ('id', 'title', 'comment', 'item_id', 'item')

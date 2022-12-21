@@ -8,6 +8,8 @@ django-extensions = "*"
 ipython = "*"
 pylint-django = "*"
 djangorestframework = "*"
+django = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
