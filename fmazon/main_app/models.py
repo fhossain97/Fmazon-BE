@@ -8,6 +8,7 @@ class Item(models.Model):
     quantity = models.IntegerField(default=0)
     price = models.IntegerField(default=0)
     description = models.CharField(max_length=500, default='No Description Found')
+    url= models.TextField(default='No Image')
 
     # def get_absolute_url(self):
     #     return reverse('detail', kwargs={'item_id': self.id})
