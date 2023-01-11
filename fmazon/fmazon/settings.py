@@ -60,8 +60,9 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'fmazon.authentication.JWTAuthentication',
+        'main_app.authentication.JWTAuthentication',
     ]
+    
 }
 
 

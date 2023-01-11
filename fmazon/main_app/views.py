@@ -53,7 +53,6 @@ def add_photo(request, item_id):
     return redirect('detail', item_id=item_id)
 
 class RegisterView(APIView):
-
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
